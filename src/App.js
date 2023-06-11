@@ -31,7 +31,12 @@ export default function App(){
     setFilter(e.target.dataset.name.toLowerCase())
     setFilterAndSearch(false)
   } 
-
+  // reset search input and filterby results when clicking the back btn
+  function resetInputAndFilter(){
+    setFormData('')
+    setFilter('')
+  }
+  
 //   function AddId(){
 //     console.log(countries)
 //     setCountries(prev => prev.map(country => [...country, country.push(nanoid())]  )
@@ -68,7 +73,7 @@ export default function App(){
                 </div>
               </div>
             }/>
-            <Route path='/:moreDeatilsId' element={<MoreDeatils countries={countries}/>}/>
+            <Route path='/:moreDeatilsId' element={<MoreDeatils countries={countries} resetInputAndFilter={()=> resetInputAndFilter()}/>}/>
           </Route>
         </Routes>
   )
