@@ -262,13 +262,16 @@ button{
     overflow: hidden;
 }
 
-
 .countries:focus-within{
     outline: var(--clr-focus);
 }
 
+.flag{
+    object-fit: cover;
+}
+
 .padding{
-    padding-left: 1em;
+    padding-inline: 1em;
 }
 
 @media(min-width: 600px){

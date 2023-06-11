@@ -5,7 +5,7 @@ export default function Main(props){
     const country = Object.values(props.name.official).join('')
     return(
             <div className = 'countries'>
-                <Link to={`/${country}`}><img src={props.flags.png} width="255" height="153" alt="" /></Link>
+                <Link to={`/${country}`}><img src={props.flags.svg} className="flag" width="255" height="153" alt="" /></Link>
                 <div className="padding">
                     <h2>{props.name.common}</h2>
                     <p>Population: <span className="light_text">{props.population.toLocaleString()}</span></p>

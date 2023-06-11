@@ -11,7 +11,7 @@ export default function MoreDeatils(props){
        return moreDeatilsId === officialName
     })
 
-    const values = value => Object.values(value)
+    const values = value => Object.values(value).join('')
     const checkForProperty = property => countries.hasOwnProperty(property)
     
     return(
@@ -19,7 +19,7 @@ export default function MoreDeatils(props){
             <div className="back_button_container selecting">
                 <Link to='/' className="back_button">Back</Link>
                 <div className="flag_img_container">
-                    <img src={values(countries.flags.png)} width="600" height="400"/>
+                    <img src={values(countries.flags.svg)} width="600" height="400"/>
                 </div>
             </div>
 
